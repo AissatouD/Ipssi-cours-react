@@ -1,31 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Emoji from 'react-emoji-render';
-import styled from 'styled-components';
+//import PropTypes from 'prop-types';
+//import Emoji from 'react-emoji-render';
+//import styled from 'styled-components';
 
-const Thing = styled.div `
-    color: black;
-    border: 1px solid; 
-    display: block;
-    }
-    `;
-
-export const MessageItem = (props) => {
-
+const MessageItem = props => {
+    console.log(props);
     return (
-        <li>
-            <Thing>
-                <strong>@{props.username }</strong>
-                <div>
-                    <Emoji text={props.message } />
-                </div>
-            </Thing>
+        <li
+            style={{
+                marginBottom: 10,
+                backgroundColor: "white",
+                padding: 10,
+                borderRadius: 10
+            }}
+        >
+            <small>{props.message.username}</small>
+            <div>{props.message.messages}</div>
+
         </li>
-    )
-
+    );
 };
 
-MessageItem.propTypes = {
-    username: PropTypes.string.isRequired,
-    message: PropTypes.string.isRequired
-};
+export default MessageItem;

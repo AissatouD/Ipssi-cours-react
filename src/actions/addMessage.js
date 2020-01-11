@@ -1,11 +1,12 @@
-import
-    ADD_MESSAGE_ACTION
-    from './actionType';
+import * as action from '../actions/actionType';
 
 export const addMessage = (message, username)=> {
     return {
-        type: ADD_MESSAGE_ACTION,
+        type: action.ADD_MESSAGE_ACTION,
         message,
         username
     };
 };
+
+
+

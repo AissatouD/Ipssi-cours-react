@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "react-emoji-render": "^1.2.1"
+    "react-emoji-render": "^1.2.1",
+    "react-router-dom": "^5.1.2"
   }
 }

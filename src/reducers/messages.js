@@ -1,6 +1,4 @@
-import
-    ADD_MESSAGE_ACTION
- from '../actions/actionType';
+import { ADD_MESSAGE_ACTION} from '../actions/actionType';
 
 const INITIAL_STATE = {
     messages: [],

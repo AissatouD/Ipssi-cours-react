@@ -16,7 +16,7 @@ const Div = styled.div`
 `;
 
 const Chat = () => {
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState(['']);
     const handleMessageSubmit = message => {
         const newMessage = { message: message, username: "Aiss" };
         console.log(messages);
