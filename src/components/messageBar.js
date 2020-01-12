@@ -5,24 +5,26 @@ import {useDispatch, useSelector} from "react-redux";
 import {addMessage} from "../actions/addMessage";
 
 
-const Button = styled.button`
-  display: inline-block;
-  color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-  display: block;
-`;
-const Input = styled.input`
-  padding: 0.5em;
-  margin: 0.5em;
-  color:  "palevioletred";
-  background: papayawhip;
-  border: none;
-  border-radius: 3px;
-`;
+const inputStyle = {
+    borderRadius: 10,
+    border: "none",
+    fontSize: 16,
+    padding: 10,
+    marginRight: 10,
+    flexGrow: 1
+};
+const buttonStyle = {
+    borderRadius: 10,
+    cursor: "pointer",
+    fontSize: 20,
+    color: "#ede5f4",
+    fontWeight: "bold",
+    padding: 10,
+    flexGrow: 1,
+    border: "3px solid #c48b9f",
+    backgroundColor: "transparent"
+};
+
 
 const MessageBar = () => {
     const [message, setMessage ]= useState('');
@@ -56,13 +58,14 @@ const MessageBar = () => {
     };*/
     return (
             <form onSubmit={handleSubmit}>
-                <Input
+                <input
                     type="text"
                     name="message"
                     value={message}
                     onChange={handleChange}
+                    style={inputStyle}
                 />
-                <Button type="submit">Envoyer</Button>
+                <button type="submit" style={buttonStyle}>Envoyer</button>
              </form>
 
     )
