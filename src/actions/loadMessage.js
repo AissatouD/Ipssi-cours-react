@@ -1,4 +1,4 @@
-import * as action from './actionType';
+/*import * as action from './actionType';
 import axios from "axios";
 
 export const loadMessages = () => {
@@ -23,3 +23,4 @@ export const loadMessages = () => {
             });
     };
 };
+*/

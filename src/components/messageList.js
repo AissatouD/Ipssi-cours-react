@@ -9,15 +9,26 @@ const MessageList = () => {
 
     console.log(messages);
 
-    return (
-        <div>
-        <ul>
-            {messages.map((message, i) => {
-                return <MessageItem key={i} index={i} message={message} />;
-            })}
-        </ul>
-        </div>
-    );
+    if(messages){
+        return (
+            <div>
+                <ul>
+                    {messages.map((message, i) => {
+                        return <MessageItem key={i} index={i} message={message} />;
+                    })}
+                </ul>
+            </div>
+        );
+
+    }
+    else {
+        return (
+            <div className='no-msg'>
+                <p>Pas de messages.</p>
+            </div>
+        )
+
+    }
 
 };
 

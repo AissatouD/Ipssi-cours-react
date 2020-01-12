@@ -5,6 +5,8 @@ import React from 'react';
 
 const MessageItem = props => {
     console.log(props);
+    console.log(props.message.messages);
+
     return (
         <li
             style={{
@@ -15,9 +17,10 @@ const MessageItem = props => {
             }}
         >
             <small>{props.message.username}</small>
-            <div>{props.message.messages}</div>
+            <p>{props.message.messages}</p>
 
         </li>
+
     );
 };
 
