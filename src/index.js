@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider }  from 'react-redux';
 import Chat from './components/chat';
-import Login from './components/login/login'
+import Login from './components/login'
 import reducers from './reducers/index';
 import {
      BrowserRouter as Router,

@@ -1,17 +1,21 @@
-import { LOGIN }from '../actions/login';
 
-const INITIAL_STATE = {
-    username: null
-};
+const INITIAL_STATE = { accounts: [] };
 
-export default(state = INITIAL_STATE, action) => {
+ const login = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case LOGIN:
+        case "ADD_USERNAME" :
             return {
-                username: action.username
-            }
+                accounts: [
+                    ...state.accounts,
+                    {accounts: action.username}
+
+                ]
+            };
+
         default:
             return state;
     }
 
 };
+
+ export default login;

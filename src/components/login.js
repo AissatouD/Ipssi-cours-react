@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import {useHistory} from "react-router";
 import { useDispatch } from 'react-redux'
-import login from '../../reducers/login.js'
+import addUsername from '../actions/addUsername.js'
 //import styled from 'styled-components';
 
 
 
-const Login = (props) => {
+const Login = () => {
 
     let history = useHistory();
     const [username, setUsername ]= useState('');
@@ -20,8 +20,8 @@ const Login = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         if(username){
-            dispatch(login({username: username}));
-            setUsername('');
+            dispatch(addUsername({username: username}));
+            console.log(username);
             history.push("/chat");
 
         }
@@ -47,8 +47,8 @@ const Login = (props) => {
     )
 };
 
-Login.propTypes = {
+/*Login.propTypes = {
     handleSubmit: PropTypes.func.isRequired
-};
+};*/
 
 export default Login;

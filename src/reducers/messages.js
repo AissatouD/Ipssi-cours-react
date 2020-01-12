@@ -12,7 +12,7 @@ const messages = (state = INITIAL_STATE, action)=> {
             return {
                 messages: [
                     ...state.messages,
-                    {messages: action.message, username: action.username}
+                    {message: action.message, username: action.username}
                 ]
             };
         default:
